@@ -9,52 +9,52 @@
             margin: 0;
             padding: 0;
             font-family: sans-serif;
+            /* O 'cover' faz a imagem se ajustar, mas pode cortar um pouco as bordas para não distorcer */
             background: url('imagens/fundo.png') no-repeat center center fixed;
-            background-size: cover;
+            background-size: cover; 
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-end; /* Empurra os cards para baixo da tela */
+            justify-content: center;
             color: white;
-            padding-bottom: 80px; /* Espaço extra na parte inferior */
         }
 
         .container {
             display: flex;
-            flex-direction: row; /* Lado a lado no PC */
-            gap: 40px;
+            gap: 20px;
             padding: 20px;
             flex-wrap: wrap;
             justify-content: center;
+            width: 90%; /* Ajustado para não passar da tela */
+            max-width: 600px;
         }
 
         .card {
             background: rgba(0, 0, 0, 0.7);
-            padding: 20px;
+            padding: 15px;
             border-radius: 15px;
             text-align: center;
-            width: 250px;
+            flex: 1; /* Faz o card se ajustar ao espaço disponível */
+            min-width: 200px; /* Garante um tamanho mínimo confortável */
         }
-        .card img { width: 100%; border-radius: 10px; }
+
+        .card img { 
+            width: 100%; 
+            max-height: 100px; /* Limita a altura para não ficar gigante */
+            object-fit: contain; 
+            border-radius: 10px; 
+        }
         
         .btn {
             display: block;
             background: #e50914;
             color: white;
-            padding: 12px;
+            padding: 10px;
             text-decoration: none;
             border-radius: 5px;
-            margin-top: 15px;
+            margin-top: 10px;
             font-weight: bold;
-            font-size: 16px;
-        }
-        .btn:hover { background: #ff0a16; }
-
-        /* Responsividade para celular */
-        @media (max-width: 600px) {
-            .container { flex-direction: column; align-items: center; }
-            .card { width: 80%; }
         }
     </style>
 </head>
@@ -63,13 +63,11 @@
     <div class="container">
         <div class="card">
             <img src="imagens/filme.png" alt="Filmes">
-            <h3>Filmes</h3>
             <a href="https://app.pushinpay.com.br/service/pay/A237E96B-F58D-4ADF-913B-C5BB946368AB" class="btn">ENTRAR</a>
         </div>
 
         <div class="card">
             <img src="imagens/series.png" alt="Séries">
-            <h3>Séries</h3>
             <a href="https://app.pushinpay.com.br/service/pay/a237eb84-0271-4189-b5bd-7f564e7fa2d0" class="btn">ENTRAR</a>
         </div>
     </div>
