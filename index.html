@@ -15,18 +15,18 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: center; /* Centraliza tudo na tela */
             color: white;
         }
 
         .container {
             display: flex;
-            gap: 20px;
-            padding: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-direction: column; /* Coloca um em cima do outro no celular */
+            gap: 15px;
+            padding: 10px;
             width: 90%;
-            max-width: 600px;
+            max-width: 300px; /* Limita a largura para ficar compacto */
+            align-items: center;
         }
 
         .card {
@@ -34,15 +34,14 @@
             padding: 15px;
             border-radius: 15px;
             text-align: center;
-            flex: 1;
-            min-width: 200px;
+            width: 100%;
         }
 
         .card img { 
-            width: 100%; 
-            max-height: 100px;
+            width: 80%; 
+            max-height: 80px;
             object-fit: contain; 
-            border-radius: 10px; 
+            margin-bottom: 10px;
         }
         
         .btn {
@@ -52,26 +51,18 @@
             padding: 10px;
             text-decoration: none;
             border-radius: 5px;
-            margin-top: 10px;
             font-weight: bold;
-        }
-
-        /* Área do suporte isolada */
-        .area-suporte {
-            margin-top: 40px;
-            text-align: center;
-            width: 100%;
         }
 
         .btn-suporte {
             background: #0088cc;
             color: white;
-            padding: 12px 25px;
+            padding: 8px 20px;
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
-            border: 2px solid white;
-            display: inline-block;
+            margin-top: 20px;
+            border: 1px solid white;
         }
     </style>
 </head>
@@ -80,17 +71,14 @@
     <div class="container">
         <div class="card">
             <img src="imagens/filme.png" alt="Filmes">
-            <a href="https://app.pushinpay.com.br/service/pay/A237E96B-F58D-4ADF-913B-C5BB946368AB" class="btn">ENTRAR</a>
+            <a href="https://app.pushinpay.com.br/service/pay/A237E96B-F58D-4ADF-913B-C5BB946368AB" class="btn">FILMES</a>
         </div>
 
         <div class="card">
             <img src="imagens/series.png" alt="Séries">
-            <a href="https://app.pushinpay.com.br/service/pay/a237eb84-0271-4189-b5bd-7f564e7fa2d0" class="btn">ENTRAR</a>
+            <a href="https://app.pushinpay.com.br/service/pay/a237eb84-0271-4189-b5bd-7f564e7fa2d0" class="btn">SÉRIES</a>
         </div>
-    </div>
 
-    <!-- Nova caixa de suporte para garantir visibilidade -->
-    <div class="area-suporte">
         <a href="https://t.me/leep_benques" class="btn-suporte">SUPORTE</a>
     </div>
 
