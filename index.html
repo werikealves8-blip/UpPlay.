@@ -9,7 +9,6 @@
             margin: 0;
             padding: 0;
             font-family: sans-serif;
-            /* O 'cover' faz a imagem se ajustar, mas pode cortar um pouco as bordas para não distorcer */
             background: url('imagens/fundo.png') no-repeat center center fixed;
             background-size: cover; 
             min-height: 100vh;
@@ -26,7 +25,7 @@
             padding: 20px;
             flex-wrap: wrap;
             justify-content: center;
-            width: 90%; /* Ajustado para não passar da tela */
+            width: 90%;
             max-width: 600px;
         }
 
@@ -35,17 +34,18 @@
             padding: 15px;
             border-radius: 15px;
             text-align: center;
-            flex: 1; /* Faz o card se ajustar ao espaço disponível */
-            min-width: 200px; /* Garante um tamanho mínimo confortável */
+            flex: 1;
+            min-width: 200px;
         }
 
         .card img { 
             width: 100%; 
-            max-height: 100px; /* Limita a altura para não ficar gigante */
+            max-height: 100px;
             object-fit: contain; 
             border-radius: 10px; 
         }
         
+        /* Botão padrão (Entrar) */
         .btn {
             display: block;
             background: #e50914;
@@ -56,21 +56,17 @@
             margin-top: 10px;
             font-weight: bold;
         }
-    </style>
-</head>
-<body>
 
-    <div class="container">
-        <div class="card">
-            <img src="imagens/filme.png" alt="Filmes">
-            <a href="https://app.pushinpay.com.br/service/pay/A237E96B-F58D-4ADF-913B-C5BB946368AB" class="btn">ENTRAR</a>
-        </div>
-
-        <div class="card">
-            <img src="imagens/series.png" alt="Séries">
-            <a href="https://app.pushinpay.com.br/service/pay/a237eb84-0271-4189-b5bd-7f564e7fa2d0" class="btn">ENTRAR</a>
-        </div>
-    </div>
-
-</body>
-</html>
+        /* Botão de SUPORTE (Destacado) */
+        .btn-suporte {
+            display: block;
+            background: #0088cc; /* Cor do Telegram */
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-weight: bold;
+            border: 2px solid white; /* Borda branca para destacar */
+        }
+        .btn-suporte:hover { background: #0077b
